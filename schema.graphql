@@ -1,0 +1,8 @@
+type RabbitHoleCredential @entity {
+  id: ID!
+  owner: Bytes!
+  tokenName: String!
+  tokenId: BigInt!
+  tokenUri: String!
+  tokenContractAddress: Bytes!
+}

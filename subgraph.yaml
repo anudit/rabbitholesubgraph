@@ -1,0 +1,64 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: RabbitHoleCredential-NFTs
+    network: mainnet
+    source:
+      address: "0xa3B61c077dA9Da080D22A4cE24f9Fd5f139634cA"
+      abi: RabbitHoleCredential
+      startBlock: 14715754
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - RabbitHoleCredential
+      abis:
+        - name: RabbitHoleCredential
+          file: ./abis/RabbitHoleCredential.json
+      eventHandlers:
+        - event: Mint(indexed address,uint256,uint256)
+          handler: handleMint
+      file: ./src/mapping.ts
+  - kind: ethereum
+    name: RabbitHoleCredential-DeFi
+    network: mainnet
+    source:
+      address: "0x2fAcE815247A997eAa29881C16F75FD83f4Df65b"
+      abi: RabbitHoleCredential
+      startBlock: 14715637
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - RabbitHoleCredential
+      abis:
+        - name: RabbitHoleCredential
+          file: ./abis/RabbitHoleCredential.json
+      eventHandlers:
+        - event: Mint(indexed address,uint256,uint256)
+          handler: handleMint
+      file: ./src/mapping.ts
+  - kind: ethereum
+    name: RabbitHoleCredential-DAOs
+    network: mainnet
+    source:
+      address: "0xc9A42690912F6Bd134DBc4e2493158b3D72cAd21"
+      abi: RabbitHoleCredential
+      startBlock: 14715625
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - RabbitHoleCredential
+      abis:
+        - name: RabbitHoleCredential
+          file: ./abis/RabbitHoleCredential.json
+      eventHandlers:
+        - event: Mint(indexed address,uint256,uint256)
+          handler: handleMint
+      file: ./src/mapping.ts
