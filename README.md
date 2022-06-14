@@ -1,9 +1,22 @@
-# rabbitholesubgraph
+# RabbitHole Credentials Subgraph
 
-Build completed: Qmc1JrksHZRRXxVJQXMaJUHn2JzwX4DgjowDvczLPG8pBw
+Build completed: QmNPrCjvxpLgM6taqWDtUW8EoiCkVuSHdfa9arNfzovCKW
 
-Deployed to https://thegraph.com/explorer/subgraph/anudit/rabbithole
+Deployed to https://thegraph.com/studio/subgraph/rabbithole-credentials
 
 Subgraph endpoints:
-Queries (HTTP):     https://api.thegraph.com/subgraphs/name/anudit/rabbithole
-Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/anudit/rabbithole
+Queries (HTTP):     https://api.studio.thegraph.com/query/1649/rabbithole-credentials/v1
+
+
+Example,
+```gql
+{
+  rabbitHoleCredentials(where: {owner: "0x0023d9ffe7d793895c5da5833d56c737832ead2b"}) {
+    id
+    owner
+    tokenName
+    tokenId
+    tokenUri
+  }
+}
+```
